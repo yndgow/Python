@@ -1,6 +1,15 @@
 from pydantic import BaseModel
 from fastapi.responses import FileResponse
 from fastapi import FastAPI
+import pandas_datareader.data as web
+import datetime
+
+
+# https://wikidocs.net/4766
+start = datetime.datetime.now()
+skhynix = web.DataReader('000660.KS', 'yahoo', start)
+
+
 app = FastAPI()
 
 
