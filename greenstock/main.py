@@ -6,8 +6,8 @@ import datetime
 
 
 # https://wikidocs.net/4766
-start = datetime.datetime.now()
-skhynix = web.DataReader('000660.KS', 'yahoo', start)
+#start = datetime.datetime.now()
+#skhynix = web.DataReader('000660.KS', 'yahoo', start)
 
 
 app = FastAPI()
@@ -26,6 +26,7 @@ def hello():
 class userInfo(BaseModel):
     name: str
     phone: int
+
 
 
 @app.post("/send")
